@@ -1,0 +1,802 @@
+
+
+<html>
+<head>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>notarfoot</title>
+
+      <style type="text/css">
+
+/* <!-- Contact menu начало-->  */
+:-moz-placeholder {
+color: blue;
+}
+
+::-webkit-input-placeholder {
+color: blue;
+}
+*:focus {outline: none;}
+
+        .contact_form ul {
+        width:500px;
+        list-style-type:none;
+        list-style-position:outside;
+        margin:0px;
+        padding:0px;
+        }
+
+        .contact_form li{
+        padding:12px;
+        border-bottom:1px solid #C4C4C4;
+        position:relative;
+        }
+
+#contactform {
+  font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode",
+  sans-serif;
+background-color: rgba(0,0,0,.5);
+              border-left: 5px solid #33ADFF;
+        border-right: 5px solid #D9DA58;
+        display: block;
+        width: 500px;
+        height: 403px;
+        float: right;
+        margin: 20px}
+
+
+.contact_form h2 {font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif; font-weight: bolder; color: white;}
+
+.contact_form label {font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif; color: white;}
+
+.form_hint, .required_notification {font-size: 11px; color: white;}
+
+
+.contact_form li:first-child, .contact_form li:last-child {
+border-bottom:1px solid #777;}
+
+        .contact_form h2 {
+          margin:0;
+        display: inline;
+                }
+       
+        .required_notification {
+               color: white;
+               margin:5px 0 0 0;
+               display:inline;
+                float:right;
+                }
+
+.contact_form label {
+width:150px;
+margin-top: 3px;
+display:inline-block;
+float:left;
+padding:3px;
+}
+.contact_form input {
+height:20px;
+width:220px;
+padding:5px 8px;
+}
+.contact_form textarea {padding:8px; width:300px;}
+.contact_form button {margin-left:156px;}
+
+.contact_form input, .contact_form textarea {
+border:1px solid #aaa;
+box-shadow: 0px 0px 3px #2D9CC0, 0 10px 15px #eee inset;
+border-radius:2px;
+padding-right:70px;
+-moz-transition: padding .25s;
+-webkit-transition: padding .25s;
+-o-transition: padding .25s;
+transition: padding .25s;
+padding-right:30px;
+}
+
+.contact_form textarea {
+  border:1px solid #aaa;
+box-shadow: 0px 0px 3px #2D9CC0, 0 10px 45px 10px #eee inset;
+border-radius:2px;
+padding-right:70px;
+-moz-transition: padding .25s;
+-webkit-transition: padding .25s;
+-o-transition: padding .25s;
+transition: padding .25s;
+padding-right:30px;
+}
+
+input:required, textarea:required {
+background: #fff url(images/alatyrmalmal.jpg) no-repeat 98% center;
+}
+
+/* Button Style */
+button.submit {
+background-color: #68b12f;
+background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+background: -webkit-linear-gradient(top, #68b12f, #50911e);
+background: -moz-linear-gradient(top, #68b12f, #50911e);
+background: -ms-linear-gradient(top, #68b12f, #50911e);
+background: -o-linear-gradient(top, #68b12f, #50911e);
+background: linear-gradient(top, #68b12f, #50911e);
+border: 1px solid #509111;
+border-bottom: 1px solid #5b992b;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+box-shadow: inset 0 1px 0 0 #9fd574;
+-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+color: white;
+font-weight: bold;
+padding: 6px 20px;
+text-align: center;
+text-shadow: 0 -1px 0 #396715;
+}
+
+button.submit:hover {
+opacity:.85;
+cursor: pointer;
+}
+
+button.submit:active {
+border: 1px solid #20911e;
+box-shadow: 0 0 10px 5px #356b0b inset;
+-webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+-moz-box-shadow: 0 0 10px 5px #356b0b inset;
+-ms-box-shadow: 0 0 10px 5px #356b0b inset;
+-o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+/* Button Style конец*/
+
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
+background: #fff url(images/vosklznak.jpg) no-repeat 98% center;
+box-shadow: 0 0 5px #d45252;
+border-color: #b03535}
+
+.contact_form input:required:valid, .contact_form textarea:required:valid { /* when a field is considered valid by the browser */
+background: #fff url(images/galochkamal.png) no-repeat 98% center;
+box-shadow: 0 0 5px #5cd053;
+border-color: #28921f;
+}
+
+.form_hint::before {
+content: "\25C0"; /* треугольник, указующий влево, в  escaped unicode */
+color:#d45252;
+position: absolute;
+top:1px;
+left:150px;
+}
+
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {background: #28921f;} /* change form hint color when valid */
+.contact_form input:required:valid + .form_hint::before {color:#28921f;} /* change form hint arrow color when valid */
+
+/* Contact menu начало */
+
+
+ body {
+              width: 1200px;
+            margin: auto;
+        }
+    
+   #header  {
+            font-size: 18pt;
+            font-family: Arial;
+            width:1250px; 
+            height:300px;
+            margin: auto;
+                                   }
+     
+      #menu {
+            margin: 10px;
+            padding: 8px;
+            list-style-type: none;
+                        width: 900px;
+                        top: 200px;
+            left: 150px;
+           background-color: rgba(0,0,0,0);
+           margin: auto;
+          
+                                  }
+
+                      #menu li {
+
+                display: inline-block; 
+                margin-right: 20px;
+                           }  
+                   #menu li:last-child {
+                    margin-right: 0;
+                        }
+                   #menu li a {
+                    text-decoration: none;
+                    font-family: 'Segoe UI';
+                    border-radius: 5px;
+                    padding: 7px 15px;
+                    font-weight: bold;
+                    color: white;
+                    background-color: rgba(0,0,0,.6);
+                    transition: background-color 1.5s;
+                }
+
+                    #menu li a:hover {
+                        background-color: #00c8ff;
+                        color: yellow;
+                         
+                    }
+
+                    .nazvanie {
+                      font-family: 'Segoe UI';
+                    border-radius: 5px;
+                    padding: 7px 15px;
+                    font-weight: bold;
+                    font-size: 100px;
+                      width:500px; 
+                      height:100px ;
+                     color: white;
+                      background-color: rgba(0,0,0,0);
+                      text-align: center;
+                    }
+    .nazvanie a {
+         color: #FFFFFF;
+          text-decoration: none;
+                }
+      .nazvanie a:hover {
+        text-shadow: #00C8FF 1px 0px, #00C8FF 1px 1px, #00C8FF 0px 1px, #00C8FF -1px 1px, #00C8FF -1px 0px, #00C8FF -1px -1px, #00C8FF 0px -1px, #00C8FF 1px -1px, #00C8FF 0 0 3px, #00C8FF 0 0 3px, #00C8FF 0 0 3px, #00C8FF 0 0 3px, #00C8FF 0 0 3px, #00C8FF 0 0 3px, #00C8FF 0 0 3px, #00C8FF 0 0 3px;
+                transition: color 1.9s;
+                color: #F8FFA6;
+                 }
+            #menutonkoe {
+            width: 100%;
+            height: 60px;
+            background-color: #444444;
+            float: left;
+            line-height: 60px;
+            text-align: center;
+                                }
+         #menutonkoe div {
+
+                display: inline-block; 
+                margin-right: 10px;
+            }  
+            #menutonkoe div a {
+                    text-decoration: none;
+                    font-family: arial;
+                    font-weight: bold;
+                    color: #989A99;
+                    text-align: auto;
+                       }
+                                      #menutonkoe div a:hover {
+                                                color: #BCFF00;
+                        }
+                    .class1    {
+               width:100px;
+               height: 50px;
+               float: left;
+               background-color: #444444;
+               padding: 0px 10px;
+                          }
+                  .class2    {
+                  width:100px;
+                  height: 50px;
+                  float: left;
+                   background-color: #444444;
+                                   }
+                            .class3    {
+                            width:100px;
+                            height: 50px;
+                            float: left;
+                            background-color: #444444;
+                                                    }
+                         .class4    {
+                         width:100px;
+                         height: 50px;
+                         float: left;
+                         background-color: #444444;
+                            } 
+                            .class5    {
+                            width:100px;
+                            height: 50px;
+                            float: left;
+                            background-color: #444444;
+                                                    } 
+                          .class6    {
+                         width:100px;
+                         height: 50px;
+                         float: left;
+                         background-color: #444444;
+                            } 
+.form-search {
+  display: inline-block;
+  background: -moz-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B);
+  background: -ms-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B);
+  background: -o-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B);
+  background: -webkit-linear-gradient(#D3D3D3, #CACACA 50%, #A9A9A9 50%, #9B9B9B);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form-search input {
+  width: 60px;
+  height: 40px;
+  line-height: 32px;
+  font: 13px Helvetica, Arial, sans-serif; 
+  color:#6E7074;
+  text-shadow: 0 1px 0 #FFF;
+  -moz-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;  
+  padding: 0 30px 0 6px; 
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -moz-linear-gradient(#BCBCBC, #EBEBEB);
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -ms-linear-gradient(#BCBCBC, #EBEBEB);
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -o-linear-gradient(#BCBCBC, #EBEBEB);
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -webkit-linear-gradient(#BCBCBC, #EBEBEB); 
+  background-repeat: no-repeat; 
+  background-position: 100% 50%, 100% 100%;
+  border: 1px solid #747474;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px #575555, 0 1px 0 #FFF; 
+}
+
+.form-search input:focus {
+  width: 250px;
+  box-shadow: inset 0 1px 1px #46575b, 0 1px 0 #FFF;
+  color: #25464D;
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -moz-linear-gradient(#9CC2CA, #DFECEF);
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -ms-linear-gradient(#9CC2CA, #DFECEF);
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -o-linear-gradient(#9CC2CA, #DFECEF);
+  background-image: url("http://3.bp.blogspot.com/-4w14hQHr5yQ/Tgm6u7KwUkI/AAAAAAAACAI/Hu2poBOPx3g/s1600/search.png"), -webkit-linear-gradient(#9CC2CA, #DFECEF);
+}
+                                  .class7   {
+                                  width:100px;
+                                 height: 50px;
+                                 float: right;
+                                 background-color: #444444;
+                            } 
+                            .class8    {
+                         width:100px;
+                         height: 50px;
+                         float: right;
+                         background-color: #444444;
+                            } 
+                            
+           #centrdiv  {
+             font-size: 18pt;
+            font-family: Arial;
+            width:830px; 
+            height:740px;
+            background: rgba(0,0,0,0)
+                                   }
+                      .class15    {
+                        position: relative;
+                           width:730px;
+                         height: 400px;
+                         background-image: url(images/18449634040_7be5390e99_c.jpg);
+                         color: transparent;
+                          background-size: cover;
+                          background-color: rgba(0,0,0,.2);
+                           margin: 20px;
+                            opacity: 0.7;
+                          filter: alpha(Opacity=70);
+                          — moz-transition: all 1s ease;
+                        — webkit-transition: all 1s ease;
+                        — o-transition: all 1s ease;
+                          transition: all 1s ease;
+                        font-size: 18px;
+                                      }
+
+        .class15:hover {
+         margin: 20 20 20 60;
+        padding: 0;
+       filter: alpha (Opacity=100);
+        opacity: 1;
+       — moz-transform: rotate (360deg) scale (1.5);
+        — webkit-transform: rotate (360deg) scale (1.5);
+        — o-transform: rotate (360deg) scale (1.5);
+        — ms-transform: rotate (360deg) scale (1.5);
+}
+
+                  .class16    {
+                                                  width:420px;
+                         height: 200px;
+                         background-color: rgba(0,0,0,.3);
+                         background-image: url(images/minifootball.jpg);
+                         background-size: contain; no repeat;
+                          background-size: rgba(0,0,0,.5);
+                         margin: 20px; 
+                         opacity: 0.7;
+                          filter: alpha(Opacity=70);
+                          — moz-transition: all 1s ease;
+                        — webkit-transition: all 1s ease;
+                        — o-transition: all 1s ease;
+                          transition: all 1s ease;
+                        font-size: 18px;;
+                         float: left;   
+                            }
+
+       .class16:hover {
+        margin: 40 20 20 20;
+        padding: 0;
+       filter: alpha (Opacity=100);
+        opacity: 1;
+       — moz-transform: rotate (360deg) scale (1.5);
+        — webkit-transform: rotate (360deg) scale (1.5);
+        — o-transform: rotate (360deg) scale (1.5);
+        — ms-transform: rotate (360deg) scale (1.5);
+                   }
+                          
+                          .class17   {
+                          width:320px;
+                         height: 220px;
+                         background-color: rgba(0,0,0,.6);
+                           float: left;  
+                         background-image: url(images/fans.jpg);
+                         background-size: 110%; 
+                         margin: 20px; 
+                         opacity: 0.7;
+                       
+                          — moz-transition: all 1s ease;
+                        — webkit-transition: all 1s ease;
+                        — o-transition: all 1s ease;
+                          transition: all 1s ease;
+                        font-size: 18px;
+                             }
+
+                    .class17:hover {
+                    margin: 40 20 20 15;
+                    padding: 0;
+                   filter: alpha (Opacity=100);
+                    opacity: 1;
+                   — moz-transform: rotate (360deg) scale (1.5);
+                    — webkit-transform: rotate (360deg) scale (1.5);
+                    — o-transform: rotate (360deg) scale (1.5);
+                    — ms-transform: rotate (360deg) scale (1.5);
+                      }
+
+             #footer {
+             width:1200px; 
+             height:460px;
+             background-color: #E0E0E1;
+             float: left;
+             color: #4F5E96;   
+                            } 
+                  div#footer a {
+                    color: #4F5E96;
+              text-decoration: none;
+                }  
+                    
+              div#footer a:hover {
+              text-decoration: underline;
+                }
+
+        div.groupLinks {
+            font-family: 'Segoe UI';
+            float: left;
+            padding: 30px 40px;
+        }
+
+        div ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        div.groupLinks2 {
+            font-family: 'Segoe UI';
+                float: right;
+                padding: 30px 50px;
+                width: 500px;
+        }
+
+       #body {
+            position: relative;
+                    } 
+   #oprosnik {
+            position: absolute;
+             right: 48;
+             bottom: 60;
+                         } 
+                          #socialbut {
+            position: absolute;
+             right: 300;
+             bottom: 60;
+                         }
+
+ .socialbut {
+position: absolute;
+bottom: 230px;
+right: 150px;
+}
+
+ol,ul {
+list-style: none;
+ }
+ .socialbut ul li a {
+display: block;
+text-indent: -4000px;
+width: 25px;
+height: 25px;
+}
+.socialbut ul li {
+float: left;
+margin-right: 6px;
+ border-radius: 5px; 
+}
+.socialbut-rs {
+float: left;
+margin-right: 6px;
+background: url(http://npu.in.ua/templates/ntu/images/rrs.png) top left no-repeat;
+}
+.socialbut-fb {
+float: left;
+margin-right: 6px;
+background: url(http://npu.in.ua/templates/ntu/images/fb.png) top left no-repeat;
+}
+.socialbut-tw {
+background: url(http://npu.in.ua/templates/ntu/images/tw.png) top left no-repeat;
+}
+.socialbut-yb {
+background: url(http://npu.in.ua/templates/ntu/images/yb.png) top left no-repeat;
+}
+.socialbut-g+ {
+background: url(http://itea.ua/wp-content/themes/new-it/relize/img/socials/googlei.png) top left no-repeat;
+}
+      #navbar {
+        margin: -10;
+        padding: 0;
+        list-style-type: none;
+        width: 300px;
+              }
+
+      #navbar li {
+                height: 65px;
+                line-height: 2.5;
+        text-align:center;
+                      }
+      #navbar a {
+         background-color: rgba(0,0,0,.6);
+        color: #C4C4C4;
+        text-align: auto;
+         text-decoration: none;
+         font-size: 18pt;
+           font-weight: bold;
+        border-left: 5px solid #33ADFF;
+        border-right: 5px solid #D9DA58;
+        display: block;
+        height: 55px;
+      }
+      #navbar a:hover {
+        background-color: #00c8ff;
+        border-left: 5px solid #D9DA58;
+        border-right: 5px solid #3333FF;
+        transition: background-color 1.5s;
+         color: yellow;
+            }
+    </style>
+ </head>
+<body style="font-family: 'Segoe UI'">
+
+           <div id="header" style="background-image: url(images/74844_0.jpg); width: 1200px; height:300px" >
+<!-- mainmenu begin-->
+   <ul id="menu"> 
+   <br>
+   <br>
+        <li><a href="#">main</a></li>
+        <li><a href="#">news</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">championship</a></li>
+        <li><a href="#">contact</a></li>
+             <li><a href="#">about us</a></li>
+    </ul>
+
+    <ul > 
+                   <li class="nazvanie"><a href="#">NOTARFOOT</a></li>
+                   <br>
+                     </ul>
+         <div id="menutonkoe">
+                  <div class="class1"><a href="#">matches</a> </div>
+                  <div class="class2"><a href="#">teams</a> </div>
+                  <div class="class3"><a href="#">statistics</a> </div>
+                  <div class="class4"><a href="#">notaries</a> </div>
+                  <div class="class5"><a href="#">news</a> </div>
+                  <div class="class6"><a href="#">blog</a> </div>
+ <!-- поиск начало -->
+            <div class="classserch"><form class="form-search" method="get" action="/search" target="_blank">
+<input type="text" name="q" placeholder="поиск" value=""/></form>
+           </div>
+            <!-- поиск конец -->
+
+                   <div class="class7"><a href="#">mail</a> </div>
+                  <div class="class8"><a href="#">chat</a> </div>
+                                                       </div>
+
+     </div>
+   </div>
+
+<!-- фон стадион-->
+<div id="body" style="background-image: url(images/stadion_kyiv_9.jpg); width:1200px; height:750px" >
+     
+          <!-- меню вертикальное-->   
+             <div style="background-color: rgba(0,0,0,0); width:300px; height: 400px; clear:both; float: right;  margin: 0px 40px; padding: 10px"> <span style="color: #EDEDE5;font-size: 20 px; padding: 15px">
+
+              <ul id="navbar">
+      <li><a href="#">Championship</a></li>
+      <li><a href="#">Calendar</a></li>
+      <li><a href="#">Results</a></li>
+      <li><a href="#">Fanzone</a></li>
+      <li><a href="#">Photo</a></li>
+      <li><a href="#">Video</a></li>
+      <li><a href="#">History of competitions</a></li>
+    </ul>
+          </div>
+<!-- меню вертикальное конец-->  
+
+   <!-- опросник-->                        
+       <div id="oprosnik" style="background-color: rgba(0,0,0,.3); width:300px; height: 140px; clear:both; float: right;  padding: 10px"> 
+
+<table border="2" style="border-spacing: 20px; margin: auto; color:white">
+<caption style="font-size: 16pt; color:white; padding: 16px 0px 0px ;">Please rate our website:</caption>
+        <tr>
+            <td align="center">
+                 <ul>
+                 <li>1</li>
+                    <li><input type="radio" name="input_1" value="1"></li>
+                   </ul>
+            </td>
+            <td align="center">
+               <ul>
+                    <li>2</li>
+                    <li><input type="radio" name="input_1" value="2"></li>
+                     </li>
+                </ul>
+            </td>
+            <td align="center">
+                   <ul>
+                   <li>3</li>
+                    <li><input type="radio" name="input_1" value="3"></li>
+                     </li>
+                     </ul>
+            </td>
+              <td align="center">
+                    <ul>
+                   <li>4</li>
+                    <li><input type="radio" name="input_1" value="4"checked></li>
+                     </li>
+                     </ul>
+            </td>
+              <td align="center">
+                   <ul>
+                   <li>5</li>
+                    <li><input type="radio" name="input_1" value="5"></li>
+                     </li>
+                     </ul>
+            </td>
+        </tr>
+    </table>
+         </div>
+         <!-- опросник конец-->  
+                  
+<!-- картинки на фоне стадиона -->
+                  <div id="centrdiv"> 
+                   <div class="class15"></div>
+                   <div class="class16"><a href="#"></a> </div>
+                   <div class="class17"><a href="#"></a> </div>
+         <!-- картинки на фоне стадиона конец-->
+</div>
+        
+<!-- фон стадион конец-->
+
+<!-- футер -->
+      <div id="footer">
+        <div class="groupLinks">
+          <ul>
+          <li>ABOUT US</li>
+          .....................
+            <li><a href="">honors</a></li>
+            <li><a href="">history</a></li>
+            <li><a href="">our family</a></li>
+            <li><a href="">our country</a></li>
+            <li><a href="">contests</a></li>
+          </ul>
+                                    </div>
+           <div class="groupLinks">
+          <ul>
+          <li>SUNDRY</li>
+          .....................
+            <li><a href="">forecasters</a></li>
+            <li><a href="">special projects</a></li>
+            <li><a href="">other sports</a></li>
+            <li><a href="">Europe</a></li>
+            <li><a href="">world</a></li>
+          </ul>
+                                      </div>
+        <div class="groupLinks">
+          <ul>
+          <li>NOTARIES</li>
+          .....................
+            <li><a href="">Notary Chamber of Ukraine</a></li>
+            <li><a href="">special projects</a></li>
+            <li><a href="">workshops</a></li>
+            <li><a href="">blogs</a></li>
+            <li><a href="">Relief Fund </a></li>
+          </ul>
+                                      </div>
+
+<!-- Contact menu начало--> 
+<div id="contactform">
+    <form class="contact_form" action="" method="post" name="contact_form">
+<ul>
+<li>
+<h2>Contact Us</h2>
+<span class="required_notification">* Denotes Required Field</span>
+</li>
+
+<li>
+<label for="name">Name:</label>
+<input type="text" name="name" placeholder="Max Borisenko"required />
+</li>
+
+<li><label for="email">Email:</label>
+<input type="email" name="email" placeholder="maxjulya@gmail.com" placeholder="email format" required /></li>
+
+<li><label for="website">Website:</label>
+<input type="url" name="website" placeholder="http://maxborisenko.com/" placeholder="http://maxborisenko.com"required/>
+<span class="form_hint">
+<br>
+Proper format "http://someaddress.com"</span></li>
+
+<li><label for="message">Message:</label>
+<textarea name="message" cols="40" rows="6"required ></textarea></li>
+
+<li><button class="submit" type="submit">Submit Form</button></li>
+
+</ul>
+
+</form>
+</div>
+<!-- Contact menu конец-->    
+
+        <div class="groupLinks2">
+          <ul>
+          <li>CONTACT INFORMATION</li>
+          .....................................................
+            <li>Mailing address:<a href=""></a></li>
+            <li>01004, Kyiv , str. Gorky , 7A   tel. / fax: ( 044) 230-72-75<a href=""></a></li>
+             <li>E-mail:<a href=""></a></li>
+            <li><a href="">maxjulya@gmail.com</a></li>
+          </ul>
+
+                                      </div>
+      </div> 
+<!-- футер конец -->
+
+<!-- иконки фейсбуков -->
+<div class="socialbut">
+      <ul>
+<li class="socialbut-rs li-first"><a href="#" target="_blank">rrs</a></li>
+<li class="socialbut-fb"><a href="https://www.facebook.com/NotaryChamberOfUkraine" target="_blank">facebook</a></li>
+<li class="socialbut-tw"><a href="https://twitter.com/NPUinUA">twitter</a></li>
+<li class="socialbut-yb"><a href="http://www.youtube.com/embed/srs_Rh34up4" target="_blank">youtube</a></li>
+<li class="socialbut-g+ li-last"><a href="https://plus.google.com/+IteducateUa/videos" target="_blank">google+</a></li>
+</ul>
+    </div>
+<!-- иконки фейсбуков конец-->
+
+
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+
+ 
